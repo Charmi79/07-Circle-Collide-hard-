@@ -23,10 +23,10 @@ requestAnimationFrame(loop);
 function loop() {
   // Update Variable
   // Animate blue circle
-  if (mouseX > 0 || mouseY > 0 || mouseX < cnv.width || mouseY < cnv.height) {
-    blueX = dx;
-    blueY = dy;
-  }
+ 	if (mouseX > 0 || mouseY > 0 || mouseX < cnv.width || mouseY < cnv.height) {
+		blueX += (mouseX - blueX) * 0.02;
+		blueY += (mouseY - blueY) * 0.02;
+	}
   // Animate orange circle
   if (
     (blueX - orangeX) ** 2 + (blueY - orangeY) ** 2 <=
